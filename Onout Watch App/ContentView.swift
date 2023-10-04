@@ -8,16 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = BalanceViewModel()
+
+    @State private var inputString = ""
+    @State private var showingInputDialog = false
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Balance:")
+                .font(.headline)
+                .padding()
+            Text("$\(Int(viewModel.balance))")
+                .font(.title)
+                .padding()
+            
+            TextField("Enter new wallet", text: $inputString, onCommit: {
+                viewModel.updateWallet(wallet: inputString)
+                
+            })
+            .textFieldStyle(.plain)
+    
+            .padding()
         }
-        .padding()
     }
 }
+
 
 #Preview {
     ContentView()
