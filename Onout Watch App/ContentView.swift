@@ -3,8 +3,8 @@ import SwiftUI
 struct ContentView: View {
     @StateObject private var viewModel = BalanceViewModel()
 
-    @State private var inputString = ""
     @State private var showingInputDialog = false
+    @State private var showWalletInputView = false
 
     var body: some View {
         VStack {
@@ -25,13 +25,40 @@ struct ContentView: View {
             .actionSheet(isPresented: $showingInputDialog) {
                 ActionSheet(title: Text("Choose input method"), buttons: [
                     .default(Text("Enter on iPhone")) {
-                        // Present a view or a screen on iPhone for input
+                        showWalletInputView = true
                     },
                     .default(Text("Enter on Watch")) {
-                        // Here you can retain the existing logic or modify as needed for the watch input
+                        // Logic for watch input (if any)
                     },
                     .cancel()
                 ])
+            }
+            .sheet(isPresented: $showWalletInputView) {
+                WalletInputView(viewModel: viewModel)
+            }
+            .padding()
+        }
+        .padding()
+    }
+}
+
+struct WalletInputView: View {
+    @ObservedObject var viewModel: BalanceViewModel
+    @State private var inputString = ""
+    @Environment(\.dismiss) var dismiss
+
+    var body: some View {
+        VStack {
+            TextField("Enter new wallet", text: $inputString, onCommit: {
+                viewModel.updateWallet(wallet: inputString)
+                dismiss()
+            })
+            .textFieldStyle(.roundedBorder)
+            .padding()
+
+            Button("Submit") {
+                viewModel.updateWallet(wallet: inputString)
+                dismiss()
             }
             .padding()
         }
