@@ -1,0 +1,673 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A8488A3A2AE82EC800ECDFA1 /* Onout.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A8488A392AE82EC800ECDFA1 /* Onout.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A8488A3F2AE82EC800ECDFA1 /* apple_watch_portfolio_trackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8488A3E2AE82EC800ECDFA1 /* apple_watch_portfolio_trackerApp.swift */; };
+		A8488A412AE82EC800ECDFA1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8488A402AE82EC800ECDFA1 /* ContentView.swift */; };
+		A8488A432AE82ECA00ECDFA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8488A422AE82ECA00ECDFA1 /* Assets.xcassets */; };
+		A8488A462AE82ECA00ECDFA1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8488A452AE82ECA00ECDFA1 /* Preview Assets.xcassets */; };
+		A8488A512AE82F2600ECDFA1 /* BalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8488A502AE82F2600ECDFA1 /* BalanceModel.swift */; };
+		A8488A532AE82F4B00ECDFA1 /* BalanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8488A522AE82F4B00ECDFA1 /* BalanceViewModel.swift */; };
+		A8488A5B2AE82FD500ECDFA1 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8488A5A2AE82FD500ECDFA1 /* WidgetKit.framework */; };
+		A8488A5D2AE82FD500ECDFA1 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8488A5C2AE82FD500ECDFA1 /* SwiftUI.framework */; };
+		A8488A602AE82FD500ECDFA1 /* TrackerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8488A5F2AE82FD500ECDFA1 /* TrackerWidget.swift */; };
+		A8488A642AE82FD600ECDFA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8488A632AE82FD600ECDFA1 /* Assets.xcassets */; };
+		A8488A682AE82FD600ECDFA1 /* TrackerWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A8488A582AE82FD500ECDFA1 /* TrackerWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A8488A6D2AE8301600ECDFA1 /* BalanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8488A522AE82F4B00ECDFA1 /* BalanceViewModel.swift */; };
+		A8488A6E2AE8301900ECDFA1 /* BalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8488A502AE82F2600ECDFA1 /* BalanceModel.swift */; };
+		A8488A702AE832D900ECDFA1 /* WalletInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8488A6F2AE832D900ECDFA1 /* WalletInfoView.swift */; };
+		A8B88CD62AE8556C00252351 /* EFQRCode in Frameworks */ = {isa = PBXBuildFile; productRef = A8B88CD52AE8556C00252351 /* EFQRCode */; };
+		A8B88CD82AE859BA00252351 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B88CD72AE859BA00252351 /* WalletModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A8488A3B2AE82EC800ECDFA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8488A2D2AE82EC800ECDFA1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8488A382AE82EC800ECDFA1;
+			remoteInfo = "apple-watch-portfolio-tracker Watch App";
+		};
+		A8488A662AE82FD600ECDFA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8488A2D2AE82EC800ECDFA1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8488A572AE82FD500ECDFA1;
+			remoteInfo = TrackerWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A8488A4C2AE82ECA00ECDFA1 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				A8488A3A2AE82EC800ECDFA1 /* Onout.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8488A6C2AE82FD600ECDFA1 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A8488A682AE82FD600ECDFA1 /* TrackerWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A8488A332AE82EC800ECDFA1 /* apple-watch-portfolio-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "apple-watch-portfolio-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8488A392AE82EC800ECDFA1 /* Onout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Onout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8488A3E2AE82EC800ECDFA1 /* apple_watch_portfolio_trackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apple_watch_portfolio_trackerApp.swift; sourceTree = "<group>"; };
+		A8488A402AE82EC800ECDFA1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A8488A422AE82ECA00ECDFA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A8488A452AE82ECA00ECDFA1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A8488A502AE82F2600ECDFA1 /* BalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModel.swift; sourceTree = "<group>"; };
+		A8488A522AE82F4B00ECDFA1 /* BalanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewModel.swift; sourceTree = "<group>"; };
+		A8488A582AE82FD500ECDFA1 /* TrackerWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TrackerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8488A5A2AE82FD500ECDFA1 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		A8488A5C2AE82FD500ECDFA1 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		A8488A5F2AE82FD500ECDFA1 /* TrackerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerWidget.swift; sourceTree = "<group>"; };
+		A8488A632AE82FD600ECDFA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A8488A652AE82FD600ECDFA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8488A6F2AE832D900ECDFA1 /* WalletInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletInfoView.swift; sourceTree = "<group>"; };
+		A8B88CD72AE859BA00252351 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A8488A362AE82EC800ECDFA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8B88CD62AE8556C00252351 /* EFQRCode in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8488A552AE82FD500ECDFA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8488A5D2AE82FD500ECDFA1 /* SwiftUI.framework in Frameworks */,
+				A8488A5B2AE82FD500ECDFA1 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A8488A2C2AE82EC800ECDFA1 = {
+			isa = PBXGroup;
+			children = (
+				A8488A3D2AE82EC800ECDFA1 /* apple-watch-portfolio-tracker Watch App */,
+				A8488A5E2AE82FD500ECDFA1 /* TrackerWidget */,
+				A8488A592AE82FD500ECDFA1 /* Frameworks */,
+				A8488A342AE82EC800ECDFA1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A8488A342AE82EC800ECDFA1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A8488A332AE82EC800ECDFA1 /* apple-watch-portfolio-tracker.app */,
+				A8488A392AE82EC800ECDFA1 /* Onout.app */,
+				A8488A582AE82FD500ECDFA1 /* TrackerWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A8488A3D2AE82EC800ECDFA1 /* apple-watch-portfolio-tracker Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				A8488A3E2AE82EC800ECDFA1 /* apple_watch_portfolio_trackerApp.swift */,
+				A8488A402AE82EC800ECDFA1 /* ContentView.swift */,
+				A8488A6F2AE832D900ECDFA1 /* WalletInfoView.swift */,
+				A8488A502AE82F2600ECDFA1 /* BalanceModel.swift */,
+				A8B88CD72AE859BA00252351 /* WalletModel.swift */,
+				A8488A522AE82F4B00ECDFA1 /* BalanceViewModel.swift */,
+				A8488A422AE82ECA00ECDFA1 /* Assets.xcassets */,
+				A8488A442AE82ECA00ECDFA1 /* Preview Content */,
+			);
+			path = "apple-watch-portfolio-tracker Watch App";
+			sourceTree = "<group>";
+		};
+		A8488A442AE82ECA00ECDFA1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A8488A452AE82ECA00ECDFA1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A8488A592AE82FD500ECDFA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8488A5A2AE82FD500ECDFA1 /* WidgetKit.framework */,
+				A8488A5C2AE82FD500ECDFA1 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8488A5E2AE82FD500ECDFA1 /* TrackerWidget */ = {
+			isa = PBXGroup;
+			children = (
+				A8488A5F2AE82FD500ECDFA1 /* TrackerWidget.swift */,
+				A8488A632AE82FD600ECDFA1 /* Assets.xcassets */,
+				A8488A652AE82FD600ECDFA1 /* Info.plist */,
+			);
+			path = TrackerWidget;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A8488A322AE82EC800ECDFA1 /* apple-watch-portfolio-tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8488A4D2AE82ECA00ECDFA1 /* Build configuration list for PBXNativeTarget "apple-watch-portfolio-tracker" */;
+			buildPhases = (
+				A8488A312AE82EC800ECDFA1 /* Resources */,
+				A8488A4C2AE82ECA00ECDFA1 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8488A3C2AE82EC800ECDFA1 /* PBXTargetDependency */,
+			);
+			name = "apple-watch-portfolio-tracker";
+			productName = "apple-watch-portfolio-tracker";
+			productReference = A8488A332AE82EC800ECDFA1 /* apple-watch-portfolio-tracker.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		A8488A382AE82EC800ECDFA1 /* apple-watch-portfolio-tracker Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8488A492AE82ECA00ECDFA1 /* Build configuration list for PBXNativeTarget "apple-watch-portfolio-tracker Watch App" */;
+			buildPhases = (
+				A8488A352AE82EC800ECDFA1 /* Sources */,
+				A8488A362AE82EC800ECDFA1 /* Frameworks */,
+				A8488A372AE82EC800ECDFA1 /* Resources */,
+				A8488A6C2AE82FD600ECDFA1 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8488A672AE82FD600ECDFA1 /* PBXTargetDependency */,
+			);
+			name = "apple-watch-portfolio-tracker Watch App";
+			packageProductDependencies = (
+				A8B88CD52AE8556C00252351 /* EFQRCode */,
+			);
+			productName = "apple-watch-portfolio-tracker Watch App";
+			productReference = A8488A392AE82EC800ECDFA1 /* Onout.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A8488A572AE82FD500ECDFA1 /* TrackerWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8488A692AE82FD600ECDFA1 /* Build configuration list for PBXNativeTarget "TrackerWidgetExtension" */;
+			buildPhases = (
+				A8488A542AE82FD500ECDFA1 /* Sources */,
+				A8488A552AE82FD500ECDFA1 /* Frameworks */,
+				A8488A562AE82FD500ECDFA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrackerWidgetExtension;
+			productName = TrackerWidgetExtension;
+			productReference = A8488A582AE82FD500ECDFA1 /* TrackerWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A8488A2D2AE82EC800ECDFA1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					A8488A322AE82EC800ECDFA1 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					A8488A382AE82EC800ECDFA1 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					A8488A572AE82FD500ECDFA1 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = A8488A302AE82EC800ECDFA1 /* Build configuration list for PBXProject "apple-watch-portfolio-tracker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A8488A2C2AE82EC800ECDFA1;
+			packageReferences = (
+				A8B88CD42AE854D400252351 /* XCRemoteSwiftPackageReference "EFQRCode" */,
+			);
+			productRefGroup = A8488A342AE82EC800ECDFA1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A8488A322AE82EC800ECDFA1 /* apple-watch-portfolio-tracker */,
+				A8488A382AE82EC800ECDFA1 /* apple-watch-portfolio-tracker Watch App */,
+				A8488A572AE82FD500ECDFA1 /* TrackerWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A8488A312AE82EC800ECDFA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8488A372AE82EC800ECDFA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8488A462AE82ECA00ECDFA1 /* Preview Assets.xcassets in Resources */,
+				A8488A432AE82ECA00ECDFA1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8488A562AE82FD500ECDFA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8488A642AE82FD600ECDFA1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A8488A352AE82EC800ECDFA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8488A412AE82EC800ECDFA1 /* ContentView.swift in Sources */,
+				A8488A702AE832D900ECDFA1 /* WalletInfoView.swift in Sources */,
+				A8488A512AE82F2600ECDFA1 /* BalanceModel.swift in Sources */,
+				A8488A3F2AE82EC800ECDFA1 /* apple_watch_portfolio_trackerApp.swift in Sources */,
+				A8B88CD82AE859BA00252351 /* WalletModel.swift in Sources */,
+				A8488A532AE82F4B00ECDFA1 /* BalanceViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8488A542AE82FD500ECDFA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8488A602AE82FD500ECDFA1 /* TrackerWidget.swift in Sources */,
+				A8488A6E2AE8301900ECDFA1 /* BalanceModel.swift in Sources */,
+				A8488A6D2AE8301600ECDFA1 /* BalanceViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A8488A3C2AE82EC800ECDFA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8488A382AE82EC800ECDFA1 /* apple-watch-portfolio-tracker Watch App */;
+			targetProxy = A8488A3B2AE82EC800ECDFA1 /* PBXContainerItemProxy */;
+		};
+		A8488A672AE82FD600ECDFA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8488A572AE82FD500ECDFA1 /* TrackerWidgetExtension */;
+			targetProxy = A8488A662AE82FD600ECDFA1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A8488A472AE82ECA00ECDFA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A8488A482AE82ECA00ECDFA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		A8488A4A2AE82ECA00ECDFA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"apple-watch-portfolio-tracker Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 2S6ET84667;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.onout.balance.apple-watch-portfolio-tracker.watchkitapp";
+				PRODUCT_NAME = Onout;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		A8488A4B2AE82ECA00ECDFA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"apple-watch-portfolio-tracker Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 2S6ET84667;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.onout.balance.apple-watch-portfolio-tracker.watchkitapp";
+				PRODUCT_NAME = Onout;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		A8488A4E2AE82ECA00ECDFA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2S6ET84667;
+				INFOPLIST_KEY_CFBundleDisplayName = "apple-watch-portfolio-tracker";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.onout.balance.apple-watch-portfolio-tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A8488A4F2AE82ECA00ECDFA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2S6ET84667;
+				INFOPLIST_KEY_CFBundleDisplayName = "apple-watch-portfolio-tracker";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.onout.balance.apple-watch-portfolio-tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A8488A6A2AE82FD600ECDFA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2S6ET84667;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TrackerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TrackerWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.onout.balance.apple-watch-portfolio-tracker.watchkitapp.TrackerWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		A8488A6B2AE82FD600ECDFA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2S6ET84667;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TrackerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TrackerWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.onout.balance.apple-watch-portfolio-tracker.watchkitapp.TrackerWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A8488A302AE82EC800ECDFA1 /* Build configuration list for PBXProject "apple-watch-portfolio-tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8488A472AE82ECA00ECDFA1 /* Debug */,
+				A8488A482AE82ECA00ECDFA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8488A492AE82ECA00ECDFA1 /* Build configuration list for PBXNativeTarget "apple-watch-portfolio-tracker Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8488A4A2AE82ECA00ECDFA1 /* Debug */,
+				A8488A4B2AE82ECA00ECDFA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8488A4D2AE82ECA00ECDFA1 /* Build configuration list for PBXNativeTarget "apple-watch-portfolio-tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8488A4E2AE82ECA00ECDFA1 /* Debug */,
+				A8488A4F2AE82ECA00ECDFA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8488A692AE82FD600ECDFA1 /* Build configuration list for PBXNativeTarget "TrackerWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8488A6A2AE82FD600ECDFA1 /* Debug */,
+				A8488A6B2AE82FD600ECDFA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A8B88CD42AE854D400252351 /* XCRemoteSwiftPackageReference "EFQRCode" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/EFPrefix/EFQRCode.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A8B88CD52AE8556C00252351 /* EFQRCode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8B88CD42AE854D400252351 /* XCRemoteSwiftPackageReference "EFQRCode" */;
+			productName = EFQRCode;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A8488A2D2AE82EC800ECDFA1 /* Project object */;
+}

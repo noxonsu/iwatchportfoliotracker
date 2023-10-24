@@ -60,6 +60,7 @@ struct BalanceWidgetView: View {
                 .frame(width: 10, height: 10)
             Text("$\(formatInt(number: Int(entry.balance)))")
                 .font(.system(size: 16))
+                .bold()
                 .minimumScaleFactor(0.5)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             Spacer()
