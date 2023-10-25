@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel = BalanceViewModel()
-
+    
     @State private var inputString = ""
     @State private var showingInputDialog = false
     
@@ -32,7 +32,7 @@ struct ContentView: View {
         }
     }
     
-      
+    
 }
 
 

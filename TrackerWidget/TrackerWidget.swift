@@ -36,7 +36,7 @@ struct BalanceWidgetProvider: TimelineProvider {
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<BalanceWidgetEntry>) -> Void) {
         let currentDate = Date()
-        let refreshDate = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
+        let refreshDate = Calendar.current.date(byAdding: .hour, value: 1, to: currentDate)!
         
         viewModel.fetchBalance{ totalUsd in
             

@@ -14,7 +14,7 @@ class BalanceViewModel: ObservableObject {
     struct Wallet: Codable {
         let address: String
     }
-
+    
     
     init() {
         self.wallet = UserDefaults.standard.string(forKey: "wallet") ?? "0x873351e707257C28eC6fAB1ADbc850480f6e0633"
@@ -30,6 +30,8 @@ class BalanceViewModel: ObservableObject {
     
     
     func fetchBalance() {
+        self.wallet = UserDefaults.standard.string(forKey: "wallet") ?? "0x873351e707257C28eC6fAB1ADbc850480f6e0633"
+        
         guard let url = URL(string: "https://dashapi.onout.org/debank?address=\(self.wallet)&app=itracker") else {
             return
         }
@@ -56,6 +58,10 @@ class BalanceViewModel: ObservableObject {
     }
     
     func fetchBalance(completion: @escaping (Double) -> Void) {
+        
+        self.wallet = UserDefaults.standard.string(forKey: "wallet") ?? "0x873351e707257C28eC6fAB1ADbc850480f6e0633"
+        
+        
         guard let url = URL(string: "https://dashapi.onout.org/debank?address=\(self.wallet)&app=itracker") else {
             return
         }
@@ -103,14 +109,16 @@ class BalanceViewModel: ObservableObject {
                 return
             }
             do {
-                       let decoder = JSONDecoder()
-                       let wallet = try decoder.decode(Wallet.self, from: data)
-                       completion(wallet)
-                   } catch {
-                       DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                           self.updateWalletByUUID(uuid: uuid, completion: completion)
-                       }
-                   }
+                let decoder = JSONDecoder()
+                let wallet = try decoder.decode(Wallet.self, from: data)
+                UserDefaults.standard.set(wallet.address, forKey: "wallet")
+                self.wallet = wallet.address
+                completion(wallet)
+            } catch {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    self.updateWalletByUUID(uuid: uuid, completion: completion)
+                }
+            }
         }
         task.resume()
     }
