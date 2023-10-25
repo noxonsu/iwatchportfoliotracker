@@ -29,15 +29,17 @@ struct WalletInfoView: View {
                     .padding()
                 
         
-                NavigationLink(destination: QRCodeView(viewModel: self.viewModel)) {
-                    Text("Input New by QR Code")
-                }
-                Text("or")
+              
                 TextField("Enter new wallet", text: $inputString, onCommit: {
                     viewModel.updateWallet(wallet: inputString)
                     
                 })
                 .textFieldStyle(.plain)
+                Text("or")
+                NavigationLink(destination: QRCodeView(viewModel: self.viewModel)) {
+                    Text("Input New by QR Code")
+                }
+                
                 
             }
         }
