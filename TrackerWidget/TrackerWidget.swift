@@ -15,8 +15,7 @@ struct BalanceWidgetEntry: TimelineEntry {
 
 struct BalanceWidgetProvider: TimelineProvider {
     typealias Entry = BalanceWidgetEntry
-    private var viewModel = BalanceViewModel()
-    
+
     
     func placeholder(in context: Context) -> BalanceWidgetEntry {
         BalanceWidgetEntry(date: Date(), balance: 10000.0)
@@ -25,7 +24,7 @@ struct BalanceWidgetProvider: TimelineProvider {
     func getSnapshot(in context: Context, completion: @escaping (BalanceWidgetEntry) -> Void) {
         let currentDate = Date()
         
-        viewModel.fetchBalance{ totalUsd in
+        fetchBalance{ totalUsd in
             let entry = BalanceWidgetEntry(date: currentDate, balance: totalUsd)
             
             completion(entry)
@@ -38,14 +37,42 @@ struct BalanceWidgetProvider: TimelineProvider {
         let currentDate = Date()
         let refreshDate = Calendar.current.date(byAdding: .hour, value: 1, to: currentDate)!
         
-        viewModel.fetchBalance{ totalUsd in
-            
-            let entry = BalanceWidgetEntry(date: currentDate, balance: viewModel.balance)
-            
+        fetchBalance{ totalUsd in
+            let entry = BalanceWidgetEntry(date: currentDate, balance: totalUsd)
             let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
             completion(timeline)
         }
      
+    }
+    
+    
+    private func fetchBalance(completion: @escaping (Double) -> Void) {
+         let wallet =  UserDefaults(suiteName:"group.org.onout")?.string(forKey: "wallet") ?? "0x873351e707257C28eC6fAB1ADbc850480f6e0633"
+        print("fetch balance")
+        print(wallet)
+        
+        
+        guard let url = URL(string: "https://dashapi.onout.org/debank?address=\(wallet)&app=itracker") else {
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data else {
+                return
+            }
+            
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                if let dict = json as? [String: Any], let totalUsd = dict["total_usd"] as? Double {
+                    DispatchQueue.main.async {
+                        UserDefaults.standard.set(totalUsd, forKey: "balance")
+                        completion(totalUsd)
+                    }
+                }
+            } catch {
+                print(error.localizedDescription)
+            }
+        }.resume()
     }
 }
 
@@ -74,7 +101,7 @@ struct BalanceWidgetView: View {
         
     }
     
-    func formatInt(number: Int) -> String{
+    private func formatInt(number: Int) -> String{
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         formatter.maximumFractionDigits = 1
@@ -91,6 +118,8 @@ struct BalanceWidgetView: View {
         let result = "\(formattedNumber)\(suffix)"
         return result
     }
+
+    
 }
 
 @main

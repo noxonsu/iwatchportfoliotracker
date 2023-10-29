@@ -84,6 +84,8 @@
 		A8488A632AE82FD600ECDFA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8488A652AE82FD600ECDFA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8488A6F2AE832D900ECDFA1 /* WalletInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletInfoView.swift; sourceTree = "<group>"; };
+		A89B03CF2AEED35E00F4E824 /* TrackerWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrackerWidgetExtension.entitlements; sourceTree = "<group>"; };
+		A89B03D02AEED38000F4E824 /* apple-watch-portfolio-tracker Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "apple-watch-portfolio-tracker Watch App.entitlements"; sourceTree = "<group>"; };
 		A8B88CD72AE859BA00252351 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 		A8488A2C2AE82EC800ECDFA1 = {
 			isa = PBXGroup;
 			children = (
+				A89B03CF2AEED35E00F4E824 /* TrackerWidgetExtension.entitlements */,
 				A8488A3D2AE82EC800ECDFA1 /* apple-watch-portfolio-tracker Watch App */,
 				A8488A5E2AE82FD500ECDFA1 /* TrackerWidget */,
 				A8488A592AE82FD500ECDFA1 /* Frameworks */,
@@ -131,6 +134,7 @@
 		A8488A3D2AE82EC800ECDFA1 /* apple-watch-portfolio-tracker Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				A89B03D02AEED38000F4E824 /* apple-watch-portfolio-tracker Watch App.entitlements */,
 				A8488A3E2AE82EC800ECDFA1 /* apple_watch_portfolio_trackerApp.swift */,
 				A8488A402AE82EC800ECDFA1 /* ContentView.swift */,
 				A8488A6F2AE832D900ECDFA1 /* WalletInfoView.swift */,
@@ -460,6 +464,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "apple-watch-portfolio-tracker Watch App/apple-watch-portfolio-tracker Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"apple-watch-portfolio-tracker Watch App/Preview Content\"";
@@ -490,6 +495,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "apple-watch-portfolio-tracker Watch App/apple-watch-portfolio-tracker Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"apple-watch-portfolio-tracker Watch App/Preview Content\"";
@@ -553,6 +559,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TrackerWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 36TMC58V7J;
@@ -583,6 +590,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TrackerWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 36TMC58V7J;

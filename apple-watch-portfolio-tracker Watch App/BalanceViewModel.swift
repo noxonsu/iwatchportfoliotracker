@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import WidgetKit
+
+
 
 class BalanceViewModel: ObservableObject {
     @Published var balance = 0.0
@@ -17,20 +20,21 @@ class BalanceViewModel: ObservableObject {
     
     
     init() {
-        self.wallet = UserDefaults.standard.string(forKey: "wallet") ?? "0x873351e707257C28eC6fAB1ADbc850480f6e0633"
-        self.balance = UserDefaults.standard.double(forKey: "balance")
+        self.wallet = UserDefaults(suiteName:"group.org.onout")?.string(forKey: "wallet") ?? "0x873351e707257C28eC6fAB1ADbc850480f6e0633"
+        self.balance = UserDefaults(suiteName:"group.org.onout")?.double(forKey: "balance") ?? Double(0)
         fetchBalance()
     }
     
     func updateWallet(wallet: String) {
-        UserDefaults.standard.set(wallet, forKey: "wallet")
+        UserDefaults(suiteName:"group.org.onout")?.set(wallet, forKey: "wallet")
         self.wallet = wallet
         fetchBalance()
+        WidgetCenter.shared.reloadAllTimelines()
     }
     
     
     func fetchBalance() {
-        self.wallet = UserDefaults.standard.string(forKey: "wallet") ?? "0x873351e707257C28eC6fAB1ADbc850480f6e0633"
+        self.wallet = UserDefaults(suiteName:"group.org.onout")?.string(forKey: "wallet") ?? "0x873351e707257C28eC6fAB1ADbc850480f6e0633"
         
         guard let url = URL(string: "https://dashapi.onout.org/debank?address=\(self.wallet)&app=itracker") else {
             return
@@ -46,7 +50,7 @@ class BalanceViewModel: ObservableObject {
                 if let dict = json as? [String: Any], let totalUsd = dict["total_usd"] as? Double {
                     DispatchQueue.main.async {
                         self.balance = totalUsd
-                        UserDefaults.standard.set(totalUsd, forKey: "balance")
+                        UserDefaults(suiteName:"group.org.onout")?.set(totalUsd, forKey: "balance")
                         
                         
                     }
@@ -58,8 +62,8 @@ class BalanceViewModel: ObservableObject {
     }
     
     func fetchBalance(completion: @escaping (Double) -> Void) {
-        
-        self.wallet = UserDefaults.standard.string(forKey: "wallet") ?? "0x873351e707257C28eC6fAB1ADbc850480f6e0633"
+        self.wallet =         UserDefaults(suiteName:"group.org.onout")?.string(forKey: "wallet")
+ ?? "0x873351e707257C28eC6fAB1ADbc850480f6e0633"
         
         
         guard let url = URL(string: "https://dashapi.onout.org/debank?address=\(self.wallet)&app=itracker") else {
@@ -76,7 +80,7 @@ class BalanceViewModel: ObservableObject {
                 if let dict = json as? [String: Any], let totalUsd = dict["total_usd"] as? Double {
                     DispatchQueue.main.async {
                         self.balance = totalUsd
-                        UserDefaults.standard.set(totalUsd, forKey: "balance")
+                        UserDefaults(suiteName:"group.org.onout")?.set(totalUsd, forKey: "balance")
                         completion(totalUsd)
                     }
                 }
@@ -111,7 +115,7 @@ class BalanceViewModel: ObservableObject {
             do {
                 let decoder = JSONDecoder()
                 let wallet = try decoder.decode(Wallet.self, from: data)
-                UserDefaults.standard.set(wallet.address, forKey: "wallet")
+                UserDefaults(suiteName:"group.org.onout")?.set(wallet.address, forKey: "wallet")
                 self.wallet = wallet.address
                 completion(wallet)
             } catch {
