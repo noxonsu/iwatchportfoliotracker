@@ -25,7 +25,7 @@ struct ContentView: View {
                     .padding()
                 
                 NavigationLink(destination: WalletInfoView(viewModel: self.viewModel)){
-                    Text("Wallet Information")
+                    Text("Address Information")
                 }
                 .padding()
             }

@@ -30,7 +30,7 @@ struct WalletInfoView: View {
                 
                 
                 
-                TextField("Enter new wallet", text: $inputString, onCommit: {
+                TextField("Enter new Address", text: $inputString, onCommit: {
                     viewModel.updateWallet(wallet: inputString)
                     
                 })
@@ -43,7 +43,7 @@ struct WalletInfoView: View {
                 
             }
         }
-        .navigationTitle("Your Wallet")
+        .navigationTitle("Your Address")
     }
     
     
